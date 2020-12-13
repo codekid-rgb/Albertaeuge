@@ -1,0 +1,19 @@
+name: main
+on: [ push ]
+env:
+  MELI_SITE: "ecbcd364-a8e4-4f28-8e91-1e6bca3217e6"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "publish"
+        run: |
+          npx @getmeli/cli@next upload \
+            --url "https://cloud.meli.sh" \
+            --site "$MELI_SITE" \
+            --token "$MELI_TOKEN" \
+            --release "$GITHUB_SHA" \
+            ./
+        env:
+          MELI_TOKEN: ${{ secrets.MELI_TOKEN }}
