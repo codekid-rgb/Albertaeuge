@@ -10,7 +10,7 @@ jobs:
       - name: "publish"
         run: |
           npx @getmeli/cli@next upload \
-            --url "https://cloud.meli.sh" \
+            --url "https://web.lord.farm" \
             --site "$MELI_SITE" \
             --token "$MELI_TOKEN" \
             --release "$GITHUB_SHA" \
