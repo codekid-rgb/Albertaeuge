@@ -1,5 +1,12 @@
+
 html {
   background-color: rgb(222, 44, 0);
+}
+
+body {
+  max-width: 38rem;
+  padding: 2rem;
+  margin: auto;
 }
 
 h1 {
