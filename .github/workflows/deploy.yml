@@ -4,6 +4,7 @@ env:
   MELI_SITE: "ecbcd364-a8e4-4f28-8e91-1e6bca3217e6"
 jobs:
   build:
+    if: "github.repository == 'codekid-rgb/Albertaeuge'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,3 +18,4 @@ jobs:
             ./
         env:
           MELI_TOKEN: ${{ secrets.MELI_TOKEN }}
+
